@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/index.scss">
-    <script type="module" src="./js/index.js"></script>
     <title>WB CLONE</title>
 </head>
 <body>
@@ -21,9 +20,23 @@
             </div>
         </div>
     </header>
-    <section class="slider">
+    <section class="advertising">
         <div class="container">
-            
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
         </div>
     </section>
     <section class="catalog">
@@ -36,5 +49,8 @@
             
         </div>
     </footer>
+
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="js/slider.js"></script>
 </body>
 </html>

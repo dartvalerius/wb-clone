@@ -1,0 +1,33 @@
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+.swiper {
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 44px;
+        height: 44px;
+        border: 2px solid rgb(196, 141, 58);
+        border-radius: 50%;
+        background-color: rgb(245, 231, 211);
+
+        &::after {
+            content: "";
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 22px;
+        height: 22px;
+        border: 2px solid rgb(196, 141, 58);
+        border-radius: 50%;
+        background-color: rgb(245, 231, 211);
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: rgb(196, 141, 58);
+    }
+}
