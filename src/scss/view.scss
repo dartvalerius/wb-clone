@@ -1,0 +1,17 @@
+.view {
+    border: none;
+    margin: auto;
+    position: relative;
+}
+
+.view-btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+}

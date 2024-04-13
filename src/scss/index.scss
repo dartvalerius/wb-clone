@@ -1,6 +1,8 @@
 @import "header.scss";
 @import "slider.scss";
-@import "card.scss";
+@import "good-card.scss";
+@import "cart.scss";
+@import "view.scss";
 
 * {
     margin: 0;
@@ -14,6 +16,7 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
+    background-color: rgb(244, 244, 244);
     max-width: 1170px;
     margin: auto;
     padding: 0 15px;
