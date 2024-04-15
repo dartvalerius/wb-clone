@@ -1,3 +1,4 @@
+@import "variables.scss";
 @import "header.scss";
 @import "slider.scss";
 @import "good-card.scss";
@@ -15,9 +16,14 @@
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.container {
-    background-color: rgb(244, 244, 244);
+
+.main-window {
     max-width: 1170px;
+    border: 2px solid gray;
     margin: auto;
+}
+
+.container {
+    background-color: $main-background;
     padding: 0 15px;
 }
