@@ -1,25 +1,22 @@
-import { listAsync, goods, cartItems } from "./data.js";
-import { renderCards, renderCart, renderDiscountSlides} from "./dom.js"
-import goodImg from "../img/goods/*/*.jpg";
-
-const cart = document.querySelector(".cart");
-document.querySelector("#cartOpen").addEventListener("click", () => cart.showModal());
-document.querySelector('.cart-btn-close').addEventListener("click", () => cart.close());
-
-
-
-const view = document.querySelector(".view");
-document.querySelector(".good-card__img").addEventListener("click", () => view.showModal());
-document.querySelector('.view-btn-close').addEventListener("click", () => view.close());
+import { listAsync, goods, cartData } from "./data.js";
+import { renderLoadMessage, renderCards, renderCart, renderDiscountSlides} from "./dom.js";
+import { regViewClose, regCartDialogHandlers, regSearchHandler } from "./handlers.js";
 
 (async function(){
     try {
+        renderLoadMessage("Загрузка...");
+
         await listAsync();
-        console.log(goodImg)
+
         renderCards(goods);
+        renderDiscountSlides(goods);
+        renderCart(cartData);
+
+        regViewClose();
+        regCartDialogHandlers();
+        regSearchHandler();
     }
     catch (e) {
-        console.log("Ошибка получения товаров")
-        console.log(e);
+        console.error(e);
     }
 })()

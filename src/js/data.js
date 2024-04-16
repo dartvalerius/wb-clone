@@ -1,18 +1,19 @@
 import { getData } from "./local-storage-data.js";
+import { cartName, urlGetGoods } from "./_variables.js";
 
 let goods = [];
 
-const cartItems = getData("WB-CLONE-CART");
+const cartData = getData(cartName);
 
 const listAsync = async () => {
-    const response = await fetch("https://6612bd5b53b0d5d80f6648aa.mockapi.io/api/v1/goods");
+    const response = await fetch(urlGetGoods);
 
     goods = await response.json();
 }
 
 export {
     goods,
-    cartItems,
+    cartData,
 
     listAsync
 }

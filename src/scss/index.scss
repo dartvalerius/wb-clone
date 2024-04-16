@@ -27,3 +27,7 @@ html {
     background-color: $main-background;
     padding: 0 15px;
 }
+
+dialog {
+    position: fixed !important;
+}
